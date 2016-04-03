@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="oauth/dist/oauth.js">    </script>
+    <script src="oauth/dist/oauth.js">
+        $("button").click(function() {
+            OAuth.initialize('7Q4loMj-xdztbe8cVanc_uGeFvo');
+            OAuth.popup('instagram', function(error, success){
+
+            })
+        });
+    </script>
 </head>
 <body>
-    <button type="button" onclick="myFunction()">login</button>
-        function myFunction() {
-            OAuth.initialize('7Q4loMj-xdztbe8cVanc_uGeFvo');
-            OAuth.popup('instagram').done(function(result){
-                console.log(result)
-              // See the result below
-            }).fail(function(err) {
+    <button class="btn btn-block btn-default" style="text-align: left" data-provider="instagram">
+        <span style="display: block; margin-left: 10px">
+        <img src="https://oauth.io/api/providers/instagram/logo" width="32" height="32" class="pull-left">
+        <span style="display: block; margin-left: 43px; position: relative; top: 5px">Connect with Instagram</span>
+        </span>
+    </button>
 
-            });
-        }
 </body>
 </html>

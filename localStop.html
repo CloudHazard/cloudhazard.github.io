@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="oauth/dist/oauth.js">    </script>
+</head>
+<body>
+    <button type="button" onclick="myFunction()">login</button>
+        function myFunction() {
+            OAuth.initialize('7Q4loMj-xdztbe8cVanc_uGeFvo');
+            OAuth.popup('instagram').done(function(result){
+                console.log(result)
+              // See the result below
+            }).fail(function(err) {
+
+            });
+        }
+</body>
+</html>
